@@ -66,12 +66,15 @@ const page = () => {
           <div className="flexCenter mt-7 text-2xl" >{selectedCategory && <h1>{selectedCategory}</h1>}</div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-10">
             {filteredData.map((item) => (
-              <div key={item.alt}>
+              <div key={item.alt} className="relative group overflow-hidden rounded-lg 
+              transition-transform duration-300 transform hover:scale-105
+              ">
                 <Image
                   src={item.image}
                   alt={item.alt}
                   width={300}
                   height={300}
+                  className="object-cover w-full h-full transition-transform duration-300 transform hover:scale-110"
                 />
               </div>
             ))}
